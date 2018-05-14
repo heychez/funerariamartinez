@@ -78,8 +78,7 @@ app.post('/sendMail', (req, res) => {
 
   const mailOptions = {
     from: 'zikvanz@gmail.com',
-    // to: 'roberto.cclo@gmail.com, zikvanz@gmail.com',
-    to: 'roberto.cclo@gmail.com',
+    to: 'zikvanz@gmail.com',
     subject: 'Email de contacto',
     html: html
   };
