@@ -1,11 +1,11 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');//({ origin: true });
-
 const PORT = 3000;
 
 var app = express();
 app.use(cors());
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 app.get('/', function (req, res) {
@@ -78,7 +78,8 @@ app.post('/sendMail', (req, res) => {
 
   const mailOptions = {
     from: 'zikvanz@gmail.com',
-    to: 'zikvanz@gmail.com',
+    // to: 'zikvanz@gmail.com',
+    to: 'roberto.cclo@gmail.com',
     subject: 'Email de contacto',
     html: html
   };
